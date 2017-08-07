@@ -741,3 +741,8 @@ newrelic.webtransaction.name.files = "<%= scope['::newrelic::agent::php::newreli
 ;
 ;newrelic.browser_monitoring.attributes.include = ""
 ;newrelic.browser_monitoring.attributes.exclude = ""
+
+; INF-9010
+<%- if scope['::newrelic::agent::php::newrelic_ini_cross_application_tracer_enabled'] -%>
+newrelic_ini_cross_application_tracer.enabled = <%= scope['::newrelic::agent::php::newrelic_ini_cross_application_tracer_enabled %>
+<%- end -%>
